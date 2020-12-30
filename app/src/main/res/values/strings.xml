@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PlayerTazkerehAdiyeh</string>
+    <string name="description"> ابتدا فولدر را چک میکند اگر اهنگ در فولدر وجود داشت آنرا از حافظه ی گوشی می خواند در غیر اینصورت ابتدا دانلود شده و سپس اهنگ اجرا میگردد</string>
 </resources>
