@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_player">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_quran_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_player"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/textCurrentTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="end"
+                android:text="0:00"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/playerSeekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="6" />
+
+            <TextView
+                android:id="@+id/textTotalDuration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="0:00"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="55dp">
+
+
+        <com.example.playertazkerehadiyeh.utils.CircularSeekBar
+            android:id="@+id/circularSeekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            app:circle_color="#5F494444"
+            app:circle_progress_color="#FFF"
+            app:circle_x_radius="70dp"
+            app:circle_y_radius="70dp"
+            app:end_angle="270"
+            app:pointer_alpha_ontouch="10"
+            app:pointer_color="@color/white"
+            app:pointer_halo_border_width="0dp"
+            app:pointer_halo_color="@color/white"
+            app:pointer_halo_color_ontouch="@color/white"
+            app:pointer_halo_width="2dp"
+            app:pointer_radius="2dp"
+            app:progress="30"
+            app:start_angle="270"
+            app:use_custom_radii="true" />
+
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/play_adieh" />
+
+        <ImageView
+            android:id="@+id/img_pause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/pause_adiyeh"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/transparent_black"
+            android:fontFamily="@font/myfont"
+            android:text="2"
+            android:textColor="#061671"
+            android:visibility="gone" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi_downlaod"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/color_text_dark">
+
+        </com.wang.avi.AVLoadingIndicatorView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
